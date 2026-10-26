@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Modo Seguro Nº01: piratería, acceso a cultura y cuidados básicos para descargar y proteger tu privacidad."
+    />
+    <meta name="theme-color" content="#f2eedf" />
+    <title>Modo Seguro Nº01 - Fanzine de autodefensa digital</title>
+    <link rel="stylesheet" href="./styles.css?v=20261026-r3" />
+    <script defer src="./script.js?v=20261026-r3"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="receipt-nav" aria-label="Navegación principal">
+      <a class="back-link" href="#contenido" aria-label="Modo Seguro, inicio">MODO / SEGURO</a>
+      <p aria-label="Edición">MODO SEGURO / Nº01 / CHILE</p>
+      <div class="nav-actions">
+        <a class="button button--paper" href="./modo-seguro-n01.pdf" download>
+          BAJAR PDF
+        </a>
+        <a class="button" href="./modo-seguro-n01.pdf">IMPRIMIR PDF</a>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <article class="zine" aria-label="Fanzine Modo Seguro número 01">
+        <section class="sheet sheet--cover" aria-labelledby="cover-title">
+          <div class="thermal-strip" aria-hidden="true">
+            000001 000001 000001 000001 000001 000001
+          </div>
+
+          <div class="cover-meta">
+            <span>EDICIÓN POPULAR</span>
+            <span>$0 / COPIA Y COMPARTE</span>
+          </div>
+
+          <p class="kicker">FANZINE DE AUTODEFENSA DIGITAL</p>
+          <h1 id="cover-title">
+            MODO
+            <span>SEGURO</span>
+          </h1>
+
+          <div class="shield-stamp" aria-hidden="true">
+            <span>!</span>
+          </div>
+
+          <p class="cover-line">
+            ACCEDER A CULTURA NO DEBERÍA COSTARTE EL COMPUTADOR.
+          </p>
+
+          <div class="cover-grid">
+            <p>
+              <strong>ADBLOCK</strong><br />
+              corta la publicidad trucha
+            </p>
+            <p>
+              <strong>ARCHIVOS</strong><br />
+              piensa antes de abrir
+            </p>
+            <p>
+              <strong>PRIVACIDAD</strong><br />
+              cuida tu rastro y tu gente
+            </p>
+          </div>
+
+          <a class="tear-cta" href="#primero">EMPIEZA POR AQUÍ ↓</a>
+
+        </section>
+
+        <section class="sheet" id="primero" aria-labelledby="first-title">
+          <div class="folio"><span>01</span> ANTES DEL PRIMER CLIC</div>
+          <h2 id="first-title">PONTE<br />EL CASCO</h2>
+
+          <p class="lead">
+            Para bajar juegos, libros, películas o documentales, primero ponte
+            el casco: activa un bloqueador de anuncios. Reduce las trampas;
+            no elimina todos los riesgos.
+          </p>
+
+          <div class="steps">
+            <article class="step">
+              <span class="step__number">1</span>
+              <div>
+                <h3>COMPUTADOR O ANDROID</h3>
+                <p>
+                  Usa Firefox con <strong>uBlock Origin</strong>. En el menú,
+                  entra a Extensiones o Complementos y temas. Búscalo en la
+                  tienda de Mozilla y verifica el autor: <strong>Raymond Hill</strong>.
+                  Pulsa Agregar a Firefox; en Android puede aparecer un +.
+                </p>
+              </div>
+            </article>
+
+            <article class="step">
+              <span class="step__number">2</span>
+              <div>
+                <h3>IPHONE: DNS CON FILTROS</h3>
+                <p>
+                  En Safari abre <a href="https://rethinkdns.com/configure"
+                  rel="noreferrer">rethinkdns.com/configure</a>. Elige listas de
+                  publicidad y rastreo, no el filtro «Piracy». Descarga el perfil
+                  con el botón de Apple desde esa página e instálalo en
+                  Configuración → Perfil descargado.
+                  RethinkDNS filtra conexiones a dominios; no funciona igual
+                  que uBlock ni oculta tu identidad.
+                </p>
+              </div>
+            </article>
+
+            <article class="step">
+              <span class="step__number">3</span>
+              <div>
+                <h3>REVISA LA PROTECCIÓN</h3>
+                <p>
+                  En Firefox comprueba que uBlock esté encendido. El DNS del
+                  iPhone puede dejar pasar anuncios servidos por la misma
+                  página. Ninguna de estas herramientas certifica un sitio.
+                  Si te exigen desactivarlas para descargar, sal de ahí.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <aside class="warning-tape">
+            <strong>OJO:</strong> UN ANUNCIO NO ES SOLO MOLESTIA. PUEDE IMITAR
+            EL BOTÓN DE DESCARGA, ABRIR OTRA PESTAÑA O EMPUJARTE A INSTALAR
+            BASURA.
+          </aside>
+
+          <div class="receipt-total">
+            <span>COSTO</span><strong>$0</strong><span>PRIORIDAD</span><strong>ANTES DE NAVEGAR</strong>
+          </div>
+        </section>
+
+        <section class="sheet" aria-labelledby="button-title">
+          <div class="folio"><span>02</span> EL BOTÓN TRUCHO</div>
+          <h2 id="button-title">FRENA<br />3 SEGUNDOS</h2>
+
+          <p class="lead">
+            Un anuncio puede hacerse pasar por una descarga. Con uBlock activo,
+            este tipo de anuncio normalmente debería desaparecer.
+          </p>
+
+          <div class="download-lab" aria-label="Comparación entre botones de descarga">
+            <div class="fake-zone">
+              <p class="label label--black">SIMULACIÓN · NO DESCARGA NADA</p>
+              <button class="fake-download" id="fake-download" type="button" disabled
+                aria-controls="fake-clues" aria-describedby="tap-note">
+                DESCARGAR<br />AHORA!!!
+              </button>
+              <ul class="clues" id="fake-clues">
+                <li>es enorme y promete velocidad</li>
+                <li>aparece repetido</li>
+                <li>abre otra pestaña o redirige</li>
+              </ul>
+            </div>
+
+            <div class="real-zone">
+              <p class="label">REVISA IGUAL</p>
+              <span class="quiet-link">archivo_ejemplo.zip · 248 MB</span>
+              <p>
+                Nombre, tamaño y botón discreto no prueban que sea seguro.
+                Revisa de dónde viene, aunque se vea tranquilo.
+              </p>
+            </div>
+          </div>
+
+          <p class="tap-note" id="tap-note">
+            Este ejemplo está dibujado por la guía. No es publicidad real ni
+            comprueba si tu bloqueador funciona.
+          </p>
+
+          <div class="blocker-demo" hidden>
+            <button class="button button--reset" id="toggle-blocker" type="button"
+              aria-controls="fake-download" aria-pressed="false">SIMULAR UBLOCK ACTIVADO</button>
+            <p id="blocker-result" role="status">Sin bloqueo: el botón trucho queda a la vista.</p>
+          </div>
+
+          <div class="rule-box">
+            <p class="rule-box__title">REGLA DE LOS 3 SEGUNDOS</p>
+            <ol>
+              <li><strong>MIRA:</strong> ¿cambió la dirección o abrió otra pestaña?</li>
+              <li><strong>LEE:</strong> ¿el archivo y su extensión tienen sentido?</li>
+              <li><strong>DECIDE:</strong> si algo no calza, cierra. No debes nada.</li>
+            </ol>
+          </div>
+
+          <p class="pull-quote">“EL BOTÓN MÁS GRANDE NO SUELE SER EL CORRECTO.”</p>
+        </section>
+
+        <section class="sheet" aria-labelledby="file-title">
+          <div class="folio"><span>03</span> ANTES DE ABRIR</div>
+          <h2 id="file-title">REVISA<br />EL PAQUETE</h2>
+
+          <p class="lead">
+            Descargar no es lo mismo que ejecutar. Todavía puedes detenerte,
+            revisar y borrar.
+          </p>
+
+          <p class="file-help">
+            En Windows: Explorador → Ver → Mostrar → Extensiones de nombre de
+            archivo (en versiones anteriores, Ver → Extensiones de nombre de
+            archivo). <strong>pelicula.mp4.exe es un programa, no una película.</strong>
+          </p>
+
+          <div class="checklist" id="safety-checklist">
+            <label>
+              <input type="checkbox" />
+              <span><strong>VENÍA DE LA MISMA PÁGINA</strong> y no de una redirección.</span>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <span><strong>EL NOMBRE CALZA</strong> con lo que intenté descargar.</span>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <span><strong>LA EXTENSIÓN TIENE SENTIDO.</strong> Un video no debería ser .exe.</span>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <span><strong>LO ANALICÉ CON EL ANTIVIRUS DEL EQUIPO</strong> antes de abrirlo.</span>
+            </label>
+            <label>
+              <input type="checkbox" />
+              <span><strong>NO EXIGE APAGAR EL ANTIVIRUS</strong> ni ignorar una alerta. Si lo exige, no lo instalo.</span>
+            </label>
+          </div>
+
+          <div class="progress" id="checklist-progress" aria-live="polite" hidden>
+            <div class="progress__bar"><span id="progress-fill"></span></div>
+            <p id="progress-text">0/5 revisiones hechas</p>
+          </div>
+          <button class="button button--reset" id="reset-checklist" type="button" hidden>REVISAR OTRO ARCHIVO</button>
+
+          <div class="panic-box">
+            <h3>¿ABRISTE ALGO SOSPECHOSO?</h3>
+            <ol>
+              <li>Desconecta internet si el equipo actúa raro.</li>
+              <li>No escribas contraseñas ni datos bancarios.</li>
+              <li>Ejecuta el análisis de seguridad del sistema.</li>
+              <li>Cambia claves desde otro equipo limpio y activa la verificación en dos pasos (2FA).</li>
+              <li>Si hay plata en riesgo, avisa al banco de inmediato.</li>
+            </ol>
+          </div>
+
+          <p class="tiny">
+            Cero alertas tampoco garantiza seguridad. Si aparece una alerta o
+            no entiendes el resultado, no abras el archivo y pide ayuda.
+          </p>
+        </section>
+
+        <section class="sheet" aria-labelledby="privacy-title">
+          <div class="folio"><span>04</span> PRIVACIDAD ES DEFENSA</div>
+          <h2 id="privacy-title">TU RASTRO<br />ES TUYO</h2>
+
+          <p class="lead">
+            Privacidad no significa “tener algo que ocultar”. Significa decidir
+            quién puede conocer tu vida, tus vínculos, tu ubicación y tus ideas.
+          </p>
+
+          <div class="threat-grid">
+            <article>
+              <p class="label label--black">PARA TODA PERSONA</p>
+              <ul>
+                <li>claves largas y distintas</li>
+                <li>verificación en dos pasos en correo y redes</li>
+                <li>sistema y navegador al día</li>
+                <li>pantalla con bloqueo</li>
+                <li>copias de fotos y documentos</li>
+              </ul>
+            </article>
+            <article>
+              <p class="label label--black">SI CORRES MÁS RIESGO</p>
+              <ul>
+                <li>separa identidades y cuentas</li>
+                <li>no publiques rutinas ni domicilios</li>
+                <li>quita ubicación de tus fotos</li>
+                <li>acuerda protocolos con tu grupo</li>
+                <li>piensa qué daño quieres evitar</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="privacy-help">
+            <strong>2FA = verificación en dos pasos:</strong> un segundo código
+            además de tu clave. Actívala en Configuración → Seguridad de cada
+            cuenta y guarda los códigos de recuperación fuera del teléfono.
+            Revisa también qué apps acceden a cámara, micrófono y ubicación.
+          </p>
+
+          <blockquote>
+            LA PRIVACIDAD TAMBIÉN ES DEFENSA FRENTE AL AUTORITARISMO.
+            UN PERFIL PUEDE EXPONER TUS IDEAS, TU UBICACIÓN Y A OTRXS.
+            CUIDA TUS DATOS Y PIDE CONSENTIMIENTO ANTES DE PUBLICAR LOS AJENOS.
+          </blockquote>
+
+          <div class="myth">
+            <p><strong>MITO:</strong> “UNA VPN ME VUELVE INVISIBLE”.</p>
+            <p><strong>REALIDAD:</strong> una herramienta no reemplaza buenos hábitos ni borra todo tu rastro.</p>
+          </div>
+
+        </section>
+
+        <section class="sheet sheet--back" aria-labelledby="back-title">
+          <div class="thermal-strip" aria-hidden="true">
+            000001 000001 000001 000001 000001 000001
+          </div>
+          <p class="kicker">RECIBO DE AUTODEFENSA DIGITAL</p>
+          <h2 id="back-title">NO ES<br />CULPA TUYA.</h2>
+          <p class="lead">
+            La estafa vive de la prisa, la precariedad y la vergüenza. Compartir
+            lo que sabemos le corta el negocio.
+          </p>
+
+          <div class="share-list">
+            <p>01. GUARDA ESTE PDF</p>
+            <p>02. IMPRIME EN BLANCO Y NEGRO</p>
+            <p>03. PÁSALO A OTRA PERSONA</p>
+            <p>04. COMPARTE LO QUE SABES CON PACIENCIA</p>
+          </div>
+
+          <div class="sources">
+            <p><strong>EL CONOCIMIENTO SE COMPARTE</strong></p>
+            <p>
+              Si alguien te pide ayuda, escucha qué necesita y acompaña los
+              pasos a su ritmo. Puedes copiar esta guía, intervenirla y compartirla.
+            </p>
+            <p>LO QUE APRENDE UNA PERSONA, NOS SIRVE A TODXS.</p>
+          </div>
+
+          <p class="issue-mark">MODO SEGURO / Nº01 / 2026 / COPIA LIBRE</p>
+        </section>
+      </article>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
