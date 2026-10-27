@@ -30,7 +30,6 @@ function resetDownloadExample() {
   if (toast) toast.classList.remove('is-visible')
 }
 
-// Volver a la sección o al historial debe permitir probarla desde cero.
 window.addEventListener('pageshow', resetDownloadExample)
 window.addEventListener('hashchange', resetDownloadExample)
 
@@ -54,7 +53,6 @@ function updateProgress(announceCompletion = false) {
   }
 }
 
-// Cada archivo requiere una revisión nueva. No se guarda el estado de la lista.
 function resetChecks() {
   checks.forEach((check) => { check.checked = false })
   updateProgress()
@@ -64,7 +62,6 @@ checks.forEach((check) => check.addEventListener('change', () => updateProgress(
 if (progress) progress.hidden = false
 resetChecks()
 
-// Evita recuperar marcas al volver mediante el historial del navegador.
 window.addEventListener('pageshow', resetChecks)
 
 if (fakeButton && fakeClues) {
