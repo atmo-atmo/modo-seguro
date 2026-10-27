@@ -216,8 +216,7 @@ a {
 }
 
 .cover-meta,
-.folio,
-.receipt-total {
+.folio {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -297,9 +296,8 @@ h1 span {
 }
 
 .cover-grid p {
-  min-height: 104px;
   margin: 0;
-  padding: 14px;
+  padding: 12px 14px;
   border-right: 2px solid var(--ink);
   font-family: "Courier New", monospace;
   font-size: 13px;
@@ -377,7 +375,7 @@ h2 {
 
 #button-title {
   font-size: clamp(40px, 13.5vw, 108px);
-  font-size: min(130px, 16.5cqi);
+  font-size: min(106px, 15.8cqi);
 }
 
 .lead {
@@ -446,23 +444,6 @@ h2 {
   color: var(--paper);
   background: var(--ink);
   font: 700 16px/1.35 "Courier New", monospace;
-}
-
-.receipt-total {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px 16px;
-  padding: 14px 0;
-  border-top: 2px dashed var(--ink);
-  border-bottom: 2px dashed var(--ink);
-}
-
-.receipt-total strong {
-  min-width: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 25px;
-  text-align: right;
-  overflow-wrap: anywhere;
 }
 
 .download-lab {
@@ -751,7 +732,82 @@ blockquote {
 
 .sheet--back h2 {
   font-size: clamp(44px, 16vw, 120px);
-  font-size: min(138px, 20cqi);
+  font-size: min(110px, 16cqi);
+}
+
+#privacy-title {
+  font-size: min(96px, 14.8cqi);
+}
+
+#resources-title,
+#p2p-title {
+  font-size: min(110px, 16cqi);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 3px solid var(--ink);
+  border-left: 2px solid var(--ink);
+}
+
+.resource-card {
+  min-width: 0;
+  padding: 18px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.resource-card h3,
+.torrent-start h3,
+.soulseek-start h3 {
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.resource-card p:last-child {
+  margin-bottom: 0;
+}
+
+.resource-card a,
+.torrent-start a {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+  text-underline-offset: 3px;
+}
+
+.directory-note,
+.p2p-note {
+  margin-top: 28px;
+  padding: 18px;
+  border: 2px solid var(--ink);
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.torrent-start,
+.soulseek-start {
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.torrent-start li {
+  margin-bottom: 12px;
+  padding-left: 4px;
+}
+
+.soulseek-start {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 3px solid var(--ink);
+}
+
+@media screen and (max-width: 700px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .share-list {
@@ -1027,14 +1083,8 @@ blockquote {
 
   .cover-meta,
   .folio,
-  .receipt-total,
   .thermal-strip {
     font-size: 10pt;
-  }
-
-  .receipt-total {
-    grid-template-columns: auto auto auto minmax(0, 1fr);
-    gap: 10px;
   }
 
   .file-help,

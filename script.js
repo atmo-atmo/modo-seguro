@@ -11,7 +11,28 @@ const toast = document.querySelector('#toast')
 const blockerDemo = document.querySelector('.blocker-demo')
 const blockerToggle = document.querySelector('#toggle-blocker')
 const blockerResult = document.querySelector('#blocker-result')
+const initialFakeLabel = fakeButton ? [...fakeButton.childNodes].map((node) => node.cloneNode(true)) : []
+const initialTapNote = tapNote?.textContent
 let toastTimer
+
+function resetDownloadExample() {
+  if (!fakeButton) return
+  fakeButton.replaceChildren(...initialFakeLabel.map((node) => node.cloneNode(true)))
+  fakeButton.classList.remove('is-exposed')
+  fakeButton.hidden = false
+  if (tapNote) tapNote.textContent = initialTapNote
+  if (blockerToggle) {
+    blockerToggle.setAttribute('aria-pressed', 'false')
+    blockerToggle.textContent = 'SIMULAR UBLOCK ACTIVADO'
+  }
+  if (blockerResult) blockerResult.textContent = 'Sin bloqueo: el botón trucho queda a la vista.'
+  window.clearTimeout(toastTimer)
+  if (toast) toast.classList.remove('is-visible')
+}
+
+// Volver a la sección o al historial debe permitir probarla desde cero.
+window.addEventListener('pageshow', resetDownloadExample)
+window.addEventListener('hashchange', resetDownloadExample)
 
 function showToast(message) {
   if (!toast) return
@@ -52,8 +73,8 @@ if (fakeButton && fakeClues) {
   fakeButton.addEventListener('click', () => {
     fakeButton.classList.add('is-exposed')
     fakeButton.textContent = 'SEÑALES DE ALERTA'
-    if (tapNote) tapNote.textContent = 'La apariencia es una pista: revisa también la dirección y el archivo.'
-    showToast('Estas señales ayudan a sospechar; un enlace discreto también puede ser peligroso.')
+    if (tapNote) tapNote.textContent = 'Es una simulación: no comprueba tu bloqueador. En una descarga real, revisa la dirección y el archivo.'
+    showToast('Un botón pequeño también puede engañar. Revisa el archivo antes de abrirlo.')
   })
 }
 
@@ -61,6 +82,7 @@ if (blockerDemo && blockerToggle && fakeButton && blockerResult) {
   blockerDemo.hidden = false
   blockerToggle.addEventListener('click', () => {
     const enabled = blockerToggle.getAttribute('aria-pressed') !== 'true'
+    resetDownloadExample()
     blockerToggle.setAttribute('aria-pressed', String(enabled))
     blockerToggle.textContent = enabled ? 'SIMULAR UBLOCK DESACTIVADO' : 'SIMULAR UBLOCK ACTIVADO'
     fakeButton.hidden = enabled
