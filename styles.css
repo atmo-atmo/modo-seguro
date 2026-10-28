@@ -839,6 +839,10 @@ blockquote {
   margin-bottom: 0;
 }
 
+.print-web {
+  display: none;
+}
+
 .issue-mark {
   margin-top: 44px;
   font: 700 12px/1.4 "Courier New", monospace;
@@ -971,6 +975,26 @@ blockquote {
 }
 
 @media print {
+  .print-web {
+    display: flex;
+    align-items: center;
+    gap: 5mm;
+    margin-top: 6mm;
+    break-inside: avoid;
+    font-size: 10pt;
+    overflow-wrap: anywhere;
+  }
+
+  .print-web img {
+    width: 32mm;
+    height: 32mm;
+    flex: 0 0 32mm;
+  }
+
+  .print-web p {
+    margin: 2mm 0 0;
+  }
+
   @page {
     size: A4 portrait;
     margin: 0;
